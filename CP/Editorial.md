@@ -1,0 +1,4 @@
+### **Hint** 
+>Categorize the zeroes next to the ones as ones which can alter the isolation of two 1's and one 1 respectively. Then, find out if you can remove the isolations of the scores in h operations using the categories you created.
+### **Solution**
+>Store the number of 0's, increasing which will remove 2 isolated 1's in **c1** and those which will remove only one 1 in **c2**. Now you have **c1+c2+1** isolated 1's and you have to make them less than **k**, if they aren't already. First use each opearation to preferably use up those 0's in **c1**, thne if you still have operations left, go for those in **c2**. After doing the operations, if the remaining **c1+c2+1-h** peaks are still greater than **k**, you cannot help the student. If it less than **k**, you can. Note that to get the score, you don't need to worry about making new isolated points as you can easily dump the extra **h's** on any corner.
